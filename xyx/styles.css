@@ -1,0 +1,145 @@
+/* 这里将定义游戏页面的样式 */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f44336;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#game-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#player-stats, #game-area {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.health-bar .progress-fill {
+    background-color: var(--secondary-color);
+}
+
+.character-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.character-section {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.skill-item, .inventory-item {
+    margin-bottom: 10px;
+}
+
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.message.success {
+    background-color: var(--primary-color);
+}
+
+.message.error {
+    background-color: var(--secondary-color);
+}
+
+.message.info {
+    background-color: #2196F3;
+}
+
+/* 添加以下样式 */
+.main-actions {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main-actions button {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.world-map {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.map-node {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.map-node.current-map {
+    border-color: var(--primary-color);
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.map-node.locked {
+    opacity: 0.5;
+}
+
+.shop-categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.shop-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
